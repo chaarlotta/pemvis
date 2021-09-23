@@ -1,0 +1,35 @@
+from tkinter import *
+import tkinter.font
+
+root = Tk()
+root.geometry("300x600")
+
+changefont = tkinter.font.Font(size=20)
+judul = Label(root, text = "ANGGOTA BARU", font = changefont)
+judul.place(x = 20, y = 10)
+
+nama = Label(root, text = "Nama Lengkap")
+alamat = Label(root, text = "Alamat")
+no_hp = Label(root, text = "Nomor Hp")
+email = Label(root, text = "Email")
+
+e1 = Entry(root, width = 40)
+e2 = Entry(root, width = 40)
+e3 = Entry(root, width = 40)
+e4 = Entry(root, width = 40)
+
+nama.place(x = 20, y = 50)
+alamat.place(x = 20, y = 90)
+no_hp.place(x = 20, y = 130)
+email.place(x = 20, y = 170)
+
+e1.place(x = 20, y = 70)
+e2.place(x = 20, y = 110)
+e3.place(x = 20, y = 150)
+e4.place(x = 20, y = 190)
+
+r = StringVar()
+rb = Radiobutton(root, text = "male", variable = r, value = "male").place(x = 20, y = 210)
+rb2 = Radiobutton(root, text = "female", variable = r, value = "female").place(x = 70, y = 210)
+
+root.mainloop()
